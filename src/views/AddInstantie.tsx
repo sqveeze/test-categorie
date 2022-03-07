@@ -18,7 +18,7 @@ export const AddInstantieView: React.FC = (): JSX.Element => {
   const validationSchema = yup
     .object({
       name: yup.string().required("Verplicht veld"),
-      startDate: yup.date().required().nullable("Verplicht veld"),
+      startDate: yup.date().required("Verplicht veld").nullable(),
       endDate: yup
         .date()
         .required("Verplicht veld")
